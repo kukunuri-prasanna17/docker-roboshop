@@ -2,7 +2,7 @@ FROM node:20
 workdir /opt/server
 COPY  package.json .
 COPY *.js .
-RUN  install npm
+RUN   npm install 
 ENV MONGO="true" \
     MONGO_URL="mongodb://mongodb:27017/catalogue"
 CMD ["node", "server.js"]
